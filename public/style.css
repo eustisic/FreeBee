@@ -1,0 +1,201 @@
+body {
+  background-color: #F5F4D8;
+  font-family: 'Roboto Mono', monospace;
+}
+
+div:hover {
+  transform: scale(1.02);
+}
+
+p {
+  font-family: sans-serif;
+  position: relative;
+}
+
+p.word_list {
+  width: 400px;
+  position: absolute;
+  bottom: 12%;
+  left: 12%;
+}
+
+#message {
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  top: 7%;
+}
+
+.info {
+  padding-left: 12%;
+}
+
+.top {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  top: 10%;
+}
+
+.top section {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  height: 50px;
+}
+
+.top form {
+  height: 100%;
+  display: inline-block;
+}
+
+.top form button {
+  background-color: white;
+  border-radius: 40px;
+  width: 100px;
+  height: 100%;
+  font-size: 1.15rem;
+}
+
+.container {
+  height: 140px;
+  width: 160px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.center {
+  height: 0px;
+  width: 80px;
+  border-bottom: 70px solid #f9d230;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: 0;
+}
+
+.center:before {
+  content: '';
+  height: 0px;
+  width: 80px;
+  border-top: 70px solid #f9d230;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: 70px;
+  left: -40px;
+}
+
+.item {
+  height: 0px;
+  width: 80px;
+  border-bottom: 70px solid #ffffff;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.item:before {
+  content: '';
+  height: 0px;
+  width: 80px;
+  border-top: 70px solid #ffffff;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: 70px;
+  left: -40px;
+}
+
+.puzzle {
+  font-size: 80px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  top: 0px;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+}
+
+i.puzzle {
+  font-size: 80px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  top: 0px;
+  bottom: 0;
+  left: -5px;
+  right: 0px;
+}
+
+.invisible {
+  width: 125px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: transparent;
+  border-color: transparent;
+  position: relative;
+  top: 5px;
+  bottom: 0;
+  left:-23px;
+  right: 0px;
+}
+
+.puzzle-piece {
+  height: 140px;
+  width: 160px;
+  position: absolute;
+  margin: auto;
+}
+
+#piece1 {
+  top: -300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#piece2 {
+  top: -150px;
+  bottom: 0;
+  left: 0;
+  right: -260px;
+}
+
+#piece3 {
+  top: 0;
+  bottom: -150px;
+  left: 0;
+  right: -260px;
+}
+
+#piece4 {
+  top: 0;
+  bottom: -300px;
+  left: 0;
+  right: 0;
+}
+
+#piece5 {
+  top: 0;
+  bottom: -150px;
+  left: -260px;
+  right: 0;
+}
+
+#piece6 {
+  top: -150px;
+  bottom: 0;
+  left: -260px;
+  right: 0;
+}

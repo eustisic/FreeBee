@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Free Bee!</title>
+    
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="/javascript/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <script src="/javascript/application.js"></script>
+  </head>
+  <body>
+    <header class="top">
+      <section>
+        <form class="new_puzzle" action="/reset" method="post">
+          <button>New Puzzle</button>
+        </form>
+        <form class="shuffle" action="/shuffle" method="post">
+          <button>Shuffle</button>
+        </form>
+        <form class="enter" action="/enter" method="post">
+          <button>Enter</button>
+        </form>
+        <form class="delete" action="/delete" method="post">
+          <button>Delete</button>
+        </form>
+      </section>
+    </header>
+
+    <main>
+      <script id="center-temp" type="text/handlebars">
+        <div class="container">
+          <div class="center">
+            <form class="puzzle" action="/add/{{key}}" method="post">
+              <button name="piece" value="{{key}}" class="invisible">
+                <i class="puzzle">{{key}}</i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </script>
+      
+      <script id="pieces-temp" type="text/handlebars">
+        {{#each letters as |letter index| }}
+          <div class="puzzle-piece" id="piece{{plusOne index}}">
+            <div class="item" id="puzzle{{plusOne index}}">
+              <form class="puzzle" action="/add/{{letter}}" method="post">
+                <button name="piece" value="{{letter}}" class="invisible">
+                  <i class="puzzle">{{letter}}</i>
+                </button>
+              </form>
+            </div>
+          </div>
+        {{/each}}
+      </script>
+
+      <script id="mesage-temp" type="text/handlebars">
+        <p class="info" id="score">{{total}} / {{winning_score}} pts</p>
+        <p class="info" id="won"><p>
+        <p class="info" id="selected-letters"></p>
+        <p id="message"></p>
+        <p class="word_list">{{joinWords word_list}}</p>
+      </script>
+
+      <script type="text/javascript">
+        Handlebars.registerHelper('plusOne', function(string) {
+          return Number(string) + 1;
+        });
+
+        Handlebars.registerHelper('joinWords', function(array) {
+          return array.join(', ')
+        });
+      </script>
+    </main>
+  </body>
+</html>
