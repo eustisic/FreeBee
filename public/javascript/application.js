@@ -28,9 +28,8 @@ class App {
     this.main.innerHTML = '';
 
     fetch(document.URL + "api")
-    .then(resp => resp.text())
-    .then(text => {
-      let data = JSON.parse(text);
+    .then(resp => {
+      let data = resp.json();
 
       Object.values(this.templates).forEach(func => {
         this.main.insertAdjacentHTML('beforeend', func(data));

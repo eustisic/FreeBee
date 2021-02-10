@@ -4,7 +4,6 @@ GEM
     backports (3.18.1)
     erubis (2.7.0)
     json (2.5.1)
-    minitest (5.14.1)
     multi_json (1.14.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
@@ -37,7 +36,6 @@ PLATFORMS
 DEPENDENCIES
   erubis
   json
-  minitest
   puma
   rack (>= 2.1.4)
   rack-test
